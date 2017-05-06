@@ -1,0 +1,2 @@
+2017-04-25 21:57:30.823:Sensor{location=Colombo, latestReading=Reading{temperature=32.5, rainfall=14.8, airpressure=19.14, humidity=77}}
+2017-04-25 22:02:30.834:Sensor{location=Colombo, latestReading=Reading{temperature=32.0, rainfall=15.0, airpressure=19.64, humidity=80}}
