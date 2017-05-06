@@ -11,3 +11,23 @@ Server will also alert the monitors if any sensor stops responding.
 * The sensors establishes a socket connection with the remote server via TCP/IP ports in order to send updates to the remote server. Socket connections are ideal to establish communication between two processes specially in this scenario where sensor and server may run at two different machines. Readings are serialized and encoded using Base64 and passed through socket communication to the server where they are deserialized and decoded.
 * The monitors use Java RMI connections to communicate with the remote server. This enables the monitors to invoke methods in the server remotely. The server and monitors will need to perform complex operations and this can be difficult through a socket connection. Java RMI is highly optimized and serves this purpose well.
 * All the readings received by the server from the sensors are written to a text file.
+
+### Running the server
+
+* Run ‘RemoteServer’ class in main.java.server package
+java main.java.server.RemoteServer (inside /build/classes)
+
+### Running the sensors
+
+* Run ‘WeatherSensor’ class in main.java.sensor package
+java main.java.sensor.WeatherSensor
+
+* username and password can be found in the users.txt file in the same package
+* only one can log in with the same username and password at a given time
+
+e.g.: (name) sensorAdmin1 - (pwd) admin123
+
+### Running the monitor
+
+* Run ‘LoginForm’ class in main.java.monitor package
+java main.java.monitor.LoginForm
